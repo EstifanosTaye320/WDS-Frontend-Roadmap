@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="result.html" method="get" enctype="multipart/form-data">
+      <div>
+        <label
+          >Name <input type="text" name="name" placeholder="User Name" required
+        /></label>
+      </div>
+      <div>
+        <label
+          >Email <input type="email" name="email" placeholder="Email" required
+        /></label>
+      </div>
+      <div>
+        <label>Age <input type="number" min="0" max="200" step="5" /></label>
+      </div>
+      <div>
+        <label
+          >Birthdate <input type="date" name="birthdate" min="2016-06-10"
+        /></label>
+      </div>
+      <div>
+        Favorite Foods
+        <div>
+          <label>Apple <input type="checkbox" name="apple" /></label>
+        </div>
+        <div>
+          <label>banana <input type="checkbox" name="banana" /></label>
+        </div>
+      </div>
+      <div>
+        Age
+        <div>
+          <label>Male <input type="radio" value="male" name="gender" /></label>
+          <label
+            >Female <input type="radio" value="female" name="gender"
+          /></label>
+        </div>
+      </div>
+      <div>
+        <label for="eyeColor">eye color</label>
+        <select name="eyeColor" id="eyeColor" multiple>
+          <option value="Blue">Blue</option>
+          <option label="Green" value="Green"></option>
+        </select>
+      </div>
+      <div>
+        <label>Bio <textarea name="bio" cols="30" rows="10"></textarea></label>
+      </div>
+      <div><input type="hidden" name="hidden" value="hi" /></div>
+      <div>
+        <label>File <input type="file" name="file" /></label>
+      </div>
+      <div>
+        <label>Phone <input type="tel" name="phone" /></label>
+      </div>
+      <div>
+        <label>URL <input type="url" name="url" /></label>
+      </div>
+      <div>
+        <label>color <input type="color" name="color" /></label>
+      </div>
+      <div>
+        <label
+          >Password
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+        /></label>
+      </div>
+
+      <button type="reset">Reset</button>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
