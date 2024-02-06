@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotating border animation</title>
+    <style>
+      body {
+        background-color: #333;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        justify-content: space-evenly;
+      }
+
+      .btn {
+        background: none;
+        background-color: white;
+        color: white;
+        padding: 10px 24px;
+        position: relative;
+        font-size: 20px;
+        z-index: 1;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        z-index: -1;
+        background-color: #333;
+      }
+
+      .btn::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        top: 0;
+        left: 80%;
+        width: 10px;
+        height: 4px;
+        background-color: #333;
+        transition: 0.5s;
+      }
+
+      .btn:hover::after {
+        width: 20px;
+        left: 20%;
+      }
+
+      .btn-1:hover {
+        box-shadow: 0 0 35px green;
+        background-color: green;
+        color: green;
+      }
+
+      .btn-2:hover {
+        box-shadow: 0 0 35px red;
+        background-color: red;
+        color: red;
+      }
+
+      .btn-3:hover {
+        box-shadow: 0 0 35px lightblue;
+        background-color: lightblue;
+        color: lightblue;
+      }
+
+      .btn > i {
+        position: absolute;
+        /* inset: 0; */
+        bottom: 0;
+        left: 20%;
+        width: 10px;
+        height: 4px;
+        background-color: #333;
+        transition: 0.5s;
+      }
+
+      .btn:hover > i {
+        width: 20px;
+        left: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn btn-1">Hover-me <i></i></button
+      ><button class="btn btn-2">Hover-me <i></i></button
+      ><button class="btn btn-3">Hover-me <i></i></button>
+    </div>
+  </body>
+</html>

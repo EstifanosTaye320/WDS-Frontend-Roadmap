@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS variables</title>
+    <style>
+      :root {
+        --my-background-color: blue;
+        --my-border-color: rgb(138, 34, 112);
+        --my-border-width: 1px;
+        --div-background: red;
+        --text-color: black;
+        --div-padding: 10px;
+        --div-margin: 10px;
+      }
+
+      body {
+        background-color: var(--background-color, pink);
+      }
+
+      .btn {
+        background: none;
+        padding: 5px 10px;
+        background-color: white;
+        font-size: 15px;
+        position: relative;
+        border: var(--my-border-color) solid var(--my-border-width);
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: blue;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .btn:hover::before {
+        transform: scaleX(1);
+      }
+
+      .child {
+        background-color: var(--div-background);
+        color: var(--text-color);
+      }
+
+      .one {
+        --div-background: blue;
+        --text-color: white;
+      }
+
+      .one-1 {
+        margin: var(--div-margin);
+        padding: var(--div-padding);
+      }
+
+      .one-2 {
+        margin: var(--div-margin);
+        padding: var(--div-padding);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <div class="child one-1">1.1</div>
+      <div class="child one-2">1.2</div>
+      <div class="child one-3">1.3</div>
+    </div>
+
+    <div class="two">
+      <div class="child two-1">2.1</div>
+      <div class="child two-2">2.2</div>
+    </div>
+    <br />
+    <button class="btn" id="dark-theme-btn">Dark theme</button>
+    <button class="btn" id="light-theme-btn">Light theme</button>
+
+    <script>
+      // console.log(
+      //   window
+      //     .getComputedStyle(document.documentElement)
+      //     .getPropertyValue("--div-background")
+      // );
+
+      document
+        .getElementById("dark-theme-btn")
+        .addEventListener("click", () => {
+          document.documentElement.style.setProperty(
+            "--background-color",
+            "#333"
+          );
+        });
+
+      document
+        .getElementById("light-theme-btn")
+        .addEventListener("click", () => {
+          document.documentElement.style.setProperty(
+            "--background-color",
+            "#eee"
+          );
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamdi challenge</title>
+    <style>
+      .middle {
+        position: relative;
+        top: 40vh;
+        left: 10%;
+      }
+      .nice {
+        background: none;
+        position: relative;
+        transition: color 0.4s linear;
+        padding: 10px 20px;
+        font-size: 30px;
+      }
+
+      .nice:hover {
+        color: white;
+      }
+
+      .nice::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transition: transform 0.5s;
+        transform-origin: 0 0;
+        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+        transform: scaleX(0);
+      }
+
+      .nice:hover::before {
+        transform: scaleX(1);
+      }
+    </style>
+
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 20vh;
+        left: 70%;
+      }
+
+      .button {
+        background: none;
+        padding: 10px 20px;
+        max-width: 200px;
+        margin: 5px;
+        position: relative;
+        transition: 0.8s;
+        overflow: hidden;
+      }
+
+      .button1:hover,
+      .button2:hover {
+        color: white;
+      }
+
+      .button1,
+      .button2 {
+        color: rgb(65, 141, 167);
+      }
+
+      .button3,
+      .button4 {
+        color: white;
+      }
+
+      .button3:hover,
+      .button4:hover {
+        color: rgb(65, 141, 167);
+      }
+
+      .button::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: rgb(65, 141, 167);
+        right: 0;
+        width: 100%;
+        height: 0%;
+        z-index: -1;
+        transition: 0.8s;
+      }
+
+      .button2::before,
+      .button4::before {
+        bottom: 0;
+        border-radius: 50% 50% 0 0;
+      }
+
+      .button1::before,
+      .button3::before {
+        top: 0;
+        border-radius: 0 0 50% 50%;
+      }
+
+      .button3::before,
+      .button4::before {
+        height: 180%;
+      }
+
+      .button1:hover::before,
+      .button2:hover::before {
+        height: 180%;
+      }
+
+      .button3:hover::before,
+      .button4:hover::before {
+        height: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="middle"><button class="nice" type="button">Slide</button></div>
+    <div class="container">
+      <button class="button button1">Hover me</button
+      ><button class="button button2">Hover me</button
+      ><button class="button button3">Hover me</button
+      ><button class="button button4">Hover me</button>
+    </div>
+  </body>
+</html>

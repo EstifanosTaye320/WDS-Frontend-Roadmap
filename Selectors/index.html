@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <style>
+      /* input:required {}
+      input:disabled {} */
+      /* input:checked {
+        background-color: red;
+      } */
+      /* li:first-child {
+        background-color: red;
+      }
+
+      li:last-child {
+        background-color: red;
+      } */
+
+      /* li:nth-child(2n - 1) {
+        background-color: red;
+      } */
+
+      /* span:first-of-type {
+      }
+      span:last-of-type {
+      }
+      li:nth-last-of-type(2) {}
+      li:nth-of-type(2){} */
+      /* li:not(.red) {
+        background-color: red;
+      } */
+      /* div.red::before {
+        content: "";
+        background-color: red;
+      } */
+      /* [data-red="true"] {
+        background-color: red;
+      } */
+      /* [estif^='12'] {"begins"}
+      [estif$='12'] {"ends"}
+      [estif*='12'] {"anywhere"} */
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" />
+    <input type="text" required />
+    <div class="red">This is a div</div>
+    <span data-red="false">This is a span</span>
+    <div>
+      <span estif="123">
+        <b>nested test</b>
+      </span>
+    </div>
+    <ul>
+      <li class="red">item 1</li>
+      <li id="red">item 2</li>
+      <li>item 3</li>
+    </ul>
+  </body>
+</html>
