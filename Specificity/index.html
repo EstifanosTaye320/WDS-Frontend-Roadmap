@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specificity</title>
+    <style>
+      /*specificity decreases from left to right*/
+      /* ignore all other selectors like > + ... */
+      /* 0 1 0 0 */
+      #header-id {
+        color: black !important;
+      }
+
+      /* 0 0 1 0 */
+      .heading {
+        color: red;
+      }
+
+      /* 0 0 1 1 */
+      h1.heading {
+        color: blue;
+      }
+
+      /* 0 0 0 1 */
+      h1 {
+        color: green !important;
+      }
+
+      .paragraph {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header-id" class="heading" style="color: cyan">Header 1</h1>
+    <p class="paragraph">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis mollitia
+      recusandae, dicta sapiente voluptatibus reiciendis accusamus harum quam
+      doloremque architecto.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>specifity with kevin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Protest+Riot&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        background: rgb(173, 57, 7);
+        font-family: "Poppins", sans-serif;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        transition: color 1s;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 5rem;
+        font-family: "Protest Riot", sans-serif;
+      }
+
+      div {
+        width: 70%;
+      }
+
+      p {
+        text-align: justify;
+        font-size: 1.3em;
+        font-weight: 600;
+      }
+
+      p + p {
+        text-align: center;
+      }
+
+      body {
+        color: green;
+      }
+
+      body {
+        color: cyan;
+      }
+
+      .defination {
+        color: green;
+      }
+
+      div p {
+        color: pink;
+      }
+
+      p {
+        color: black !important;
+      }
+
+      .source {
+        color: blue;
+      }
+
+      #source {
+        color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Specificity</h1>
+    <div class="divness">
+      <p class="defination">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, tenetur
+        id! Ex, fugiat? Nulla ratione nemo odit. Numquam porro dolorum
+        distinctio laborum, voluptatem est sunt neque recusandae quod, eius
+        ullam. Rem modi illo quia at possimus assumenda id hic expedita est,
+        optio iusto ratione ex velit aut ipsum dolores nesciunt!
+      </p>
+      <p class="source" id="source" style="color: gray">-spcificity</p>
+    </div>
+  </body>
+</html>
