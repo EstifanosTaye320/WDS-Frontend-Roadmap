@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set CSS Variable in ::after from JavaScript</title>
+    <style>
+      /* Define some styles */
+      .myElement::after {
+        content: var(--after-content);
+        color: var(--after-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="myElement">This is a div</div>
+
+    <script>
+      // Get the element
+      const element = document.querySelector(".myElement");
+
+      // Set CSS variable values
+      element.style.setProperty("--after-content", '"New content"');
+      element.style.setProperty("--after-color", "blue");
+    </script>
+  </body>
+</html>

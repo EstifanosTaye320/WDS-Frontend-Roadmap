@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      /* *,
+      *::after,
+      *::before {
+        --number-set: "4";
+      } */
+
+      body {
+        background: #333;
+      }
+
+      .grid-container {
+        /* position: relative; */
+        display: grid;
+        gap: 3px;
+        /* row-gap: 3px; */
+        /* column-gap: 3px; */
+
+        grid-template-columns: 200px 250px;
+        /* grid-template-columns: repeat(4, 100px); */
+        /* grid-template-rows: 200px 150px; */
+
+        /* grid-auto-rows: 150px; */
+        grid-auto-rows: minmax(150px, auto);
+        /* grid-auto-columns: 200px; */
+        /* grid-auto-flow: column; */
+
+        background-color: white;
+        /* min-height: 500px; */
+        min-height: 100vh;
+        /* max-width: 500px; */
+
+        /* grid-template-areas: "header header" "side-bar content" "side-bar content"; */
+
+        justify-content: center;
+
+        align-content: center;
+
+        justify-items: center;
+
+        align-items: center;
+      }
+
+      .grid-items {
+        position: relative;
+        padding: 45px 7px 0;
+        /* --number-set: "4"; */
+      }
+
+      .grid-items:nth-child(2n) {
+        background-color: cyan;
+      }
+
+      .grid-items:nth-child(2n + 1) {
+        background-color: aquamarine;
+      }
+
+      .grid-item-1 {
+        /* grid-area: header; */
+
+        /* grid-column-start: 1;
+        grid-column-end: -1; */
+        /* grid-column-end: 3; */
+
+        /* grid-column: 1 /-1; */
+
+        grid-column: span 2;
+
+        justify-self: start;
+        align-self: start;
+
+        /* min-height: 70px;
+        max-width: 500px; */
+      }
+      .grid-item-2 {
+        /* grid-area: side-bar; */
+
+        /* grid-column-start: 2; */
+        /* grid-row-start: 2;
+        grid-row-end: 4; */
+
+        /* grid-row: 2 / 4; */
+
+        grid-row: span 2;
+
+        /* min-height: 70px;
+        max-width: 500px; */
+      }
+      .grid-item-3 {
+        /* grid-area: content; */
+
+        /* grid-column-start: 1; */
+        /* grid-row-start: 2;
+        grid-row-end: 4; */
+
+        /* grid-row: 2 / 4; */
+
+        grid-row: span 2;
+
+        /* min-height: 70px;
+        max-width: 500px; */
+      }
+
+      .grid-items::before {
+        content: "Grid-items";
+        position: absolute;
+        top: 10px;
+        left: 3%;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .grid-items::after {
+        /* --number-set: "4"; */
+        content: var(--number-set, "1");
+        position: absolute;
+        top: 10px;
+        right: 3%;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      /* .grid-item-1 {
+        --number-set: "100";
+      } */
+      /* .grid-item-2::after {
+        --number-set: "2";
+      }
+      .grid-item-3::after {
+        content: "3";
+      }
+      .grid-item-4::after {
+        content: "4";
+      }
+      .grid-item-5::after {
+        content: "5";
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-items grid-item-1">
+        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
+        aspernatur illo voluptas itaque cumque nulla amet perspiciatis facilis
+        repudiandae veritatis? Quod fuga illum perspiciatis pariatur quibusdam
+        et odit exercitationem sequi beatae distinctio, commodi doloribus nisi.
+        Molestias recusandae aperiam, nihil nulla harum tempora illum quos iusto
+        rerum dicta velit sunt consectetur! -->
+      </div>
+      <div class="grid-items grid-item-2">
+        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
+        magnam harum nulla labore eum nihil ipsum officia magni ratione
+        deleniti. -->
+      </div>
+      <div class="grid-items grid-item-3"></div>
+      <div class="grid-items grid-item-4"></div>
+      <div class="grid-items grid-item-5"></div>
+      <!-- <div class="grid-items grid-item-6"></div> -->
+    </div>
+
+    <script>
+      const columns = document.getElementsByClassName("grid-items");
+      let number;
+      for (let ele of columns) {
+        // console.log(ele);
+        number = ele.classList[1].charAt(10);
+        // console.log(number);
+        // console.log(window.getComputedStyle(ele, "::after").content);
+        ele.style.setProperty("--number-set", `'${number}'`);
+      }
+      // console.log(columns);
+    </script>
+  </body>
+</html>
