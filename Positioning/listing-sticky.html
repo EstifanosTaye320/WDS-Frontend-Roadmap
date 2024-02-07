@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>listing sticky</title>
+    <style>
+      body {
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: lightgray;
+      }
+
+      .list {
+        padding: 20px;
+      }
+
+      .listcontent {
+        padding: 10px 0 10px 20px;
+      }
+
+      .list-header {
+        background-color: #333;
+        color: rgb(110, 238, 110);
+        padding: 7px 0 7px 10px;
+        position: relative;
+      }
+
+      /* .list-header {
+        position: sticky;
+        top: 0;
+      } */
+
+      /* for better browser support */
+      @supports (position: sticky) {
+        .list-header {
+          position: -webkit-sticky;
+          position: -moz-sticky;
+          position: -ms-sticky;
+          position: -o-sticky;
+          position: sticky;
+          top: 0;
+        }
+      }
+
+      .empty-space {
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="list">
+        <div class="list-group">
+          <div class="list-header">A</div>
+          <div class="listcontent">
+            <div>Ant</div>
+            <div>Arrest</div>
+            <div>Available</div>
+            <div>Approximate</div>
+            <div>Arbitrary</div>
+          </div>
+        </div>
+        <div class="list-group">
+          <div class="list-header">B</div>
+          <div class="listcontent">
+            <div>Bee</div>
+            <div>Been</div>
+            <div>Bus</div>
+            <div>Bust</div>
+            <div>But</div>
+          </div>
+        </div>
+        <div class="list-group">
+          <div class="list-header">C</div>
+          <div class="listcontent">
+            <div>Cut</div>
+            <div>Cat</div>
+            <div>Car</div>
+            <div>Carpinter</div>
+            <div>Cascade</div>
+          </div>
+        </div>
+        <div class="list-group">
+          <div class="list-header">D</div>
+          <div class="listcontent">
+            <div>Dinner</div>
+            <div>Duck</div>
+            <div>Duster</div>
+            <div>Drum</div>
+            <div>Dribble</div>
+          </div>
+        </div>
+      </div>
+      <div class="empty-space"></div>
+    </div>
+  </body>
+</html>

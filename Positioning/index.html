@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioning</title>
+  </head>
+  <style>
+    .parent {
+      position: relative;
+      background-color: cyan;
+      padding: 5px;
+    }
+
+    .one {
+      background-color: aquamarine;
+      /* position: relative;
+      top: 10px;
+      bottom: 10px; */
+      /* position: absolute;
+      top: 0; */
+      /* bottom: 0; */
+
+      position: sticky;
+    }
+
+    .two {
+      background-color: orange;
+      position: fixed;
+    }
+
+    .three {
+      background-color: pink;
+      position: absolute;
+      bottom: 0;
+    }
+  </style>
+  <body>
+    <div class="parent">
+      parent
+      <div class="one">one</div>
+      <div class="two">two</div>
+      <div class="three">three</div>
+    </div>
+  </body>
+</html>
