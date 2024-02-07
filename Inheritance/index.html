@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inheritance</title>
+    <style>
+      /* button {
+        background-color: red;
+        border: none;
+        font-size: 1rem;
+        font-family: inherit;
+      }
+
+      div {
+        background-color: green;
+        font-size: 2rem;
+        border: 5px black solid;
+      }
+
+      p {
+        border: inherit;
+      } */
+
+      button {
+        all: unset;
+        background-color: revert;
+        padding: revert;
+        position: relative;
+      }
+
+      button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        border: 2px lightgray solid;
+        transition: 0.5s;
+      }
+
+      button:hover::before {
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Button</button>
+    <div>
+      This is a div
+      <p>this is a p</p>
+    </div>
+  </body>
+</html>
