@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kevin box-sizing borderbox</title>
+    <style>
+      /* *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      } */
+
+      /* if you need to change the box sizing to content box for many child elements later in your code it is  better to use this as the started code*/
+
+      /* *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      html {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #efefef;
+        color: #333;
+        font-family: basic-sans, sans-serif;
+      } */
+
+      /* this is just my attempt at kevins code with pesudo element selector */
+
+      /* .container {
+        position: absolute;
+        width: 400px;
+        height: 60px;
+        background-color: #333;
+        margin-top: 30px;
+      }
+
+      .container::before {
+        content: "container-box";
+        position: absolute;
+        padding-left: 4px;
+        font-size: 15px;
+        left: 0;
+        right: 0;
+        top: -17px;
+        height: -20px;
+        border-radius: 5px 5px 0 0;
+        background-color: cyan;
+      }
+
+      .container::after {
+        content: "border-box";
+        position: absolute;
+        padding-left: 4px;
+        font-size: 15px;
+        left: 0;
+        right: 0;
+        bottom: -17px;
+        height: -20px;
+        border-radius: 0 0 5px 5px;
+        background-color: aquamarine;
+      } */
+
+      /* this is kevins code re-written by me */
+
+      .content-box {
+        width: 500px;
+        padding-left: 5px;
+        font-size: 15px;
+        padding: 20px;
+        border: 10px solid black;
+        border-radius: 5px 5px 0 0;
+        background-color: cyan;
+      }
+      .content {
+        width: 500px;
+        height: 50px;
+        background-color: #333;
+      }
+      .border-box {
+        box-sizing: border-box;
+        width: 500px;
+        padding-left: 5px;
+        font-size: 15px;
+        padding: 20px;
+        border: 10px solid black;
+        border-radius: 0 0 5px 5px;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container"></div> -->
+    <div class="content-box">Content box</div>
+    <div class="content"></div>
+    <div class="border-box">Border box</div>
+  </body>
+</html>
