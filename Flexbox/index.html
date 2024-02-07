@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex box</title>
+    <style>
+      body {
+        background-color: #333;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+      }
+      .flexbox-container {
+        display: flex;
+        background-color: yellow;
+        position: relative;
+        width: 100%;
+        /* left: 0;
+        right: 0;
+        top: 25%; */
+
+        /* flex-direction: column; */
+
+        /* justify-content: center; */
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+
+        /* align-items: stretch; */
+        /* align-items: start; */
+        /* align-items: center; */
+
+        /* flex-wrap: wrap; */
+
+        /* align-content: start; */
+        /* align-content: end; */
+        /* align-content: space-between; */
+      }
+      .flexbox-item {
+        /* height: 100px; */
+        width: 200px;
+        margin: 10px;
+        background-color: lightgray;
+        border: 3px solid #333;
+      }
+
+      .flexbox-item-1 {
+        min-height: 100px;
+        flex-shrink: 0;
+        align-self: end;
+        order: 3;
+      }
+
+      .flexbox-item-2 {
+        min-height: 200px;
+        flex-grow: 2;
+        flex-basis: 0;
+        align-self: center;
+        order: 1;
+      }
+
+      .flexbox-item-3 {
+        min-height: 300px;
+        flex-grow: 1;
+        flex-basis: 0;
+        order: 2;
+      }
+
+      .flexbox-container::before {
+        content: "Flex Container";
+        position: absolute;
+        color: yellow;
+        top: -1.7rem;
+        font-size: 1.5rem;
+        left: 1%;
+      }
+
+      .flexbox-item {
+        position: relative;
+      }
+
+      .flexbox-item::before {
+        content: "this is text";
+        position: absolute;
+        font-size: 1.5rem;
+        top: 5px;
+        left: 5%;
+      }
+
+      .flexbox-item-1::before {
+        content: "Flexbox Item 1";
+      }
+      .flexbox-item-2::before {
+        content: "Flexbox Item 2";
+      }
+      .flexbox-item-3::before {
+        content: "Flexbox Item 3";
+      }
+
+      .axis {
+        position: absolute;
+      }
+
+      .cross-axis {
+        top: 0;
+        bottom: 0;
+        left: 49.5%;
+        width: 7px;
+        /* right: 49.5%; */
+        background-color: blue;
+      }
+
+      .cross-axis::before {
+        content: "Cross-axis";
+        position: absolute;
+        left: -110px;
+        width: 200px;
+        font-size: 1.5rem;
+        bottom: 5%;
+        color: black;
+      }
+
+      .main-axis {
+        left: 0;
+        right: 0;
+        top: 48.5%;
+        height: 7px;
+        /* bottom: 48.5%; */
+        background-color: red;
+      }
+
+      .main-axis::before {
+        content: "Main-axis";
+        position: absolute;
+        top: -1.7rem;
+        right: 2%;
+        font-size: 1.5rem;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flexbox-container">
+      <div class="flexbox-item flexbox-item-1"></div>
+      <div class="flexbox-item flexbox-item-2"></div>
+      <div class="flexbox-item flexbox-item-3"></div>
+      <!-- <div class="axis main-axis"></div>
+      <div class="axis cross-axis"></div> -->
+    </div>
+  </body>
+</html>

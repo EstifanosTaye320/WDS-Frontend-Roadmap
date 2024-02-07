@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kevin cards</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* font-size: 0.5rem; */
+      }
+
+      .document-title {
+        text-shadow: 2px 2px 0 rgb(44, 36, 36);
+        color: rgba(241, 147, 53, 0.806);
+        font-weight: 800;
+      }
+
+      .container {
+        /* background-color: lightgreen; */
+        display: flex;
+        /* flex-direction: column; */
+        gap: 2rem;
+
+        /* align-items: stretch; */
+        /* align-items: start; */
+        /* align-items: end; */
+        align-items: center;
+
+        border: 5px solid firebrick;
+      }
+
+      .column {
+        background-color: lightgreen;
+        padding: 15px;
+        /* flex-shrink: 0; */
+        /* flex: 1.; */
+        /* flex-grow: 0; */
+        flex-basis: 100%;
+        /* flex-shrink: 0; */
+        /* width: 100%; */
+      }
+
+      .title {
+        margin: 0;
+        margin-bottom: 5px;
+      }
+
+      .content {
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: 15px;
+      }
+
+      .column:nth-child(2) {
+        background-color: pink;
+        /* display: flex; */
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          flex-direction: column;
+        }
+      }
+
+      /* .paragraph::before {
+        content: "this is before";
+        background-color: pink;
+      } */
+    </style>
+  </head>
+  <body>
+    <h1 class="document-title">Flexbox cards</h1>
+    <h2 class="title">Some cards</h2>
+    <div class="container" id="container">
+      <article class="column column-1">
+        <h3 class="title">column-1</h3>
+        <p class="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+          officia!
+        </p>
+      </article>
+      <article class="column column-2">
+        <h3 class="title">column-2</h3>
+        <p class="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+          officia!
+        </p>
+      </article>
+      <article class="column column-3">
+        <h3 class="title">column-3</h3>
+        <p class="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+          voluptas tempora culpa hic cupiditate expedita tenetur voluptates
+          incidunt quam soluta?
+        </p>
+      </article>
+    </div>
+
+    <!-- <p class="paragraph"><span>this the first child</span></p>
+
+    <script>
+      console.log(document.querySelector(".paragraph:first-child"));
+    </script> -->
+  </body>
+</html>

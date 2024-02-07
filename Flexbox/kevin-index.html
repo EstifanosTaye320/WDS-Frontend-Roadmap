@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex with kevin</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1rem;
+      }
+
+      .document-title {
+        text-shadow: 2px 2px 0 rgb(44, 36, 36);
+        color: rgba(241, 147, 53, 0.806);
+        font-weight: 800;
+      }
+      .menu-content {
+        display: flex;
+        /* flex-direction: column; */
+        /* min-height: 800px; */
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        /* justify-content: center; */
+        /* justify-content: start; */
+        /* justify-content: end; */
+        justify-content: space-between;
+        /* justify-content: space-around; */
+        /* justify-content: space-evenly; */
+
+        border: 3px solid rgb(144, 54, 54);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .menu-items {
+        border: 3px solid rgb(66, 154, 66);
+        /* width: max-content; */
+        /* width: min-content; */
+        /* flex-shrink: 0; */
+        /* flex-grow: 1; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="document-title">Flex box nav-menu</h1>
+    <nav class="menu-container">
+      <ul class="menu-content">
+        <li class="menu-items menu-item-1">Home</li>
+        <li class="menu-items menu-item-2">About</li>
+        <li class="menu-items menu-item-3">Help</li>
+        <li class="menu-items menu-item-4">Contact us</li>
+        <li class="menu-items menu-item-5">Store</li>
+      </ul>
+    </nav>
+  </body>
+</html>
