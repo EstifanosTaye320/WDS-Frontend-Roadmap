@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kevin Grid</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* width: 100%; */
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        background-color: #ddd;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        display: grid;
+        gap: 10px 15px;
+
+        /* grid-template-rows: repeat(2, 1fr); */
+        grid-template-columns: repeat(auto, minmax(300px, 500px));
+
+        width: 90%;
+        height: 670px;
+      }
+      .grid-items {
+        /* min-height: 200px; */
+        border-radius: 10px;
+        color: rgb(198, 181, 181);
+        padding: 10px 20px;
+      }
+      .grid-item-3,
+      .grid-item-5 {
+        color: black;
+      }
+      .profile-image {
+        border-radius: 100%;
+        border: 2px solid white;
+        width: 30px;
+        height: 30px;
+
+        grid-row: 1 / 3;
+        grid-column: 1 / 2;
+
+        justify-self: center;
+        align-self: center;
+
+        margin: 10px;
+
+        /* float: left; */
+        /* position: relative;
+        bottom: 30px; */
+      }
+      .heading {
+        display: grid;
+        grid-template-columns: 1fr 8fr;
+        grid-template-rows: repeat(2, 30px);
+
+        justify-items: start;
+        align-items: end;
+
+        /* text-shadow: 1px 1px 0 rgb(221, 63, 63); */
+      }
+      /* .heading-title {
+        text-shadow: 1px 1px 0 rgb(131, 92, 92);
+      }
+      .heading-title-3,
+      .heading-title-5 {
+        text-shadow: 1px 1px 0 rgb(34, 18, 18);
+      } */
+      .grid-item-1 {
+        background-color: rgb(147, 44, 147);
+        /* grid-column: span 2; */
+      }
+      .grid-item-2 {
+        background-color: #444;
+      }
+      .grid-item-3 {
+        background-color: white;
+        grid-row: span 2;
+      }
+      .grid-item-4 {
+        background-color: #222;
+        order: 1;
+        /* grid-column: span 2; */
+      }
+      .grid-item-5 {
+        background-color: #eee;
+      }
+
+      @media (min-width: 900px) {
+        .grid-item-1,
+        .grid-item-4 {
+          grid-column: span 2;
+        }
+        .grid-item-3 {
+          grid-column: 4;
+        }
+      }
+
+      .main-title {
+        font-size: 23px;
+        font-weight: normal;
+        /* text-shadow: 2px 2px 0 rgb(81, 50, 50); */
+        color: #eee;
+      }
+      .main-title-3,
+      .main-title-5 {
+        /* text-shadow: 1px 1px 0 rgb(143, 116, 116); */
+        color: #333;
+        /* font-weight: 500; */
+      }
+      .heading-title {
+        font-size: small;
+        align-self: start;
+      }
+      .heading-text {
+        font-size: smaller;
+        align-self: end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid-items grid-item-1">
+        <hgroup class="heading heading-1">
+          <h3 class="heading-title heading-1">Glasses man</h3>
+          <img
+            class="profile-image"
+            src="./images/glass-man.jpg"
+            alt="glasses man"
+          />
+          <p class="heading-text">He is in the dark and he likes it</p>
+        </hgroup>
+        <h2 class="main-title main-title-1">
+          This is about a man that likes to be
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+          dignissimos iste est unde praesentium aut exercitationem eligendi.
+          Asperiores dolore, iure eum ipsum corrupti dicta alias, dignissimos
+          quae temporibus tenetur unde?
+        </p>
+      </div>
+      <div class="grid-items grid-item-2">
+        <hgroup class="heading heading-2">
+          <h3 class="heading-title heading-2">Lady flower</h3>
+          <img
+            class="profile-image"
+            src="./images/lady-flower.jpg"
+            alt="Lady flower"
+          />
+          <p class="heading-text">This lady likes to</p>
+        </hgroup>
+        <h2 class="main-title main-title-2">
+          Lorem ipsum dolor sit amet consectetur,
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nam
+          corrupti,
+        </p>
+      </div>
+      <div class="grid-items grid-item-3">
+        <hgroup class="heading heading-3">
+          <h3 class="heading-title heading-3">Lorem, ipsum dolor.</h3>
+          <img class="profile-image" src="./images/lord-dj.jpg" alt="lord dj" />
+          <p class="heading-text">Lorem ipsum dolor sit</p>
+        </hgroup>
+        <h2 class="main-title main-title-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
+          eaque accusamus hic sunt tempora quibusdam in laborum, labore facere
+          provident reiciendis beatae molestias voluptas dicta? Lorem ipsum
+          dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Quasi provident in velit nesciunt perferendis nisi! Lorem ipsum
+          dolor sit amet consectetur, adipisicing elit. Fugiat, quia at placeat
+          itaque, nemo mollitia deleniti, magni et id earum doloremque
+          voluptate! Natus rem aspernatur ipsam quibusdam vero ea illum,
+          asperiores harum ducimus atque, deleniti earum, dicta adipisci!
+          Voluptate, dolores?
+        </p>
+      </div>
+      <div class="grid-items grid-item-4">
+        <hgroup class="heading heading-4">
+          <h3 class="heading-title heading-4">Lorem, ipsum dolor.</h3>
+          <img
+            class="profile-image"
+            src="./images/smiling-man.jpg"
+            alt="smiling man"
+          />
+          <p class="heading-text">Lorem ipsum dolor sit amet consectetur.</p>
+        </hgroup>
+        <h2 class="main-title main-title-4">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
+          repudiandae fugit enim laboriosam excepturi et.
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iure
+          dolore cupiditate fuga, quasi id architecto accusamus doloribus ipsum
+          impedit magni commodi. Nostrum eveniet error, sunt dicta laudantium
+          odio expedita?
+        </p>
+      </div>
+      <div class="grid-items grid-item-5">
+        <hgroup class="heading heading-5">
+          <h3 class="heading-title heading-5">Lorem, ipsum dolor.</h3>
+          <img
+            class="profile-image"
+            src="./images/smiling-woman.jpg"
+            alt="smiling woman"
+          />
+          <p class="heading-text">Lorem ipsum dolor</p>
+        </hgroup>
+        <h2 class="main-title main-title-5">Lorem ipsum dolor sit amet,</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iure
+          dolore
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
