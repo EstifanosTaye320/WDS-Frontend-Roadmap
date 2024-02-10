@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design patterns with kevin</title>
+    <style>
+      :root {
+        --background-color: rgb(209, 202, 202);
+        --normal-bgc: #eee;
+      }
+      body {
+        background-color: var(--background-color);
+      }
+
+      .regin {
+        background-color: var(--normal-bgc);
+        padding: 40px;
+        width: 70%;
+        margin: 30px auto;
+        box-shadow: 0 0 40px #756c6c;
+      }
+
+      .items {
+        min-width: 100px;
+        height: 100px;
+        background-color: var(--background-color);
+        border: 1px solid var(--normal-bgc);
+      }
+
+      .title {
+        margin: 0;
+        text-align: center;
+        color: rgb(235, 96, 96);
+      }
+
+      .flex-container {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+
+      .flex-container > * {
+        /* flex-basis: 100%; */
+
+        /* flex-grow: 1;
+        flex-basis: 0; */
+
+        flex: 1 1 0;
+
+        /* flex: 0 1 49%; */
+      }
+      .grid-container {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+
+      .grid-container > * {
+        /* flex: 1 1 32%; */
+
+        /* more responsive */
+        flex: 1 1 20em;
+      }
+
+      .content-container {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+      .content-item-1 {
+        flex: 1 1 69%;
+        /* min-width: 300px; */
+      }
+      .content-item-2 {
+        flex: 1 1 29%;
+        min-width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="regin">
+      <h1 class="title">Even columns</h1>
+      <div class="flex-container">
+        <div class="items flex-item-1"></div>
+        <div class="items flex-item-2"></div>
+        <div class="items flex-item-3"></div>
+      </div>
+    </div>
+    <div class="regin">
+      <h1 class="title">grid ish</h1>
+      <div class="grid-container">
+        <div class="items grid-item-1"></div>
+        <div class="items grid-item-2"></div>
+        <div class="items grid-item-3"></div>
+        <div class="items grid-item-4"></div>
+        <div class="items grid-item-5"></div>
+      </div>
+    </div>
+
+    <div class="regin">
+      <h1 class="title">Content and sidebar</h1>
+      <div class="content-container">
+        <div class="items content-item-1"></div>
+        <div class="items content-item-2"></div>
+      </div>
+    </div>
+  </body>
+</html>
