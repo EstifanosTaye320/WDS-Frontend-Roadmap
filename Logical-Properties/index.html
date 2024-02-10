@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logical Properties</title>
+    <style>
+      body {
+        display: flex;
+        gap: 20px;
+      }
+      body > * {
+        flex-basis: 100%;
+      }
+      .containers {
+        background-color: rgb(51, 160, 255);
+      }
+      .boxes {
+        border: 1px solid #000;
+        /* min-width: 100px; */
+        /* height: 100px; */
+        background-color: #fff;
+      }
+      .first-container {
+        writing-mode: horizontal-tb;
+        display: flex;
+        align-self: start;
+      }
+      .first-left-box {
+        inline-size: 100px;
+        box-sizing: 50px;
+        margin-block-start: 25px;
+      }
+      .first-right-box {
+        width: 100px;
+        height: 50px;
+        margin-top: 25px;
+      }
+      .second-container {
+        display: flex;
+        writing-mode: vertical-lr;
+      }
+      .second-left-box {
+        inline-size: 100px;
+        block-size: 50px;
+        margin-block-start: 25px;
+      }
+      .second-right-box {
+        width: 100px;
+        height: 50px;
+        margin-top: 25px;
+      }
+      .third-container {
+        writing-mode: horizontal-tb;
+        display: flex;
+        /* gap: 50px; */
+      }
+      .third-container > * {
+        margin-block: auto;
+        margin-inline: auto;
+        inline-size: 200px;
+        block-size: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="containers first-container">
+      <div class="boxes first-left-box"></div>
+      <div class="boxes first-right-box"></div>
+    </div>
+
+    <div class="containers second-container">
+      <div class="boxes second-left-box"></div>
+      <div class="boxes second-right-box"></div>
+    </div>
+
+    <div class="containers third-container">
+      <div class="boxes third-left-box"></div>
+      <div class="boxes third-right-box"></div>
+    </div>
+  </body>
+</html>
